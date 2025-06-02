@@ -1,0 +1,683 @@
+
+
+:root {
+    /* Base Brand Colors */
+    --color-gold: #FFD700; /* Oro */
+    --color-black: #1a1a1a; /* Negro casi */
+    --color-red: #B22222; /* Rojo Fuerte */
+    --color-white: #FFFFFF;
+    --color-light-grey: #CCCCCC;
+    --color-dark-grey: #333333; /* Gris oscuro para fondo secundario */
+
+    /* Light Mode Theme Variables */
+    --bg-color: var(--color-white);
+    --text-color: var(--color-black);
+    --heading-color: var(--color-red);
+    --secondary-heading-color: var(--color-gold);
+    --header-bg: var(--color-black);
+    --header-text: var(--color-white);
+    --header-link: var(--color-white);
+    --header-link-hover: var(--color-gold);
+    --service-item-bg: var(--color-white);
+    --service-item-text: var(--color-black);
+    --service-item-heading: var(--color-red);
+    --section-bg: var(--color-white);
+    --dark-section-bg: var(--color-black);
+    --dark-section-text: var(--color-white);
+    --dark-section-heading: var(--color-gold);
+    --dark-section-secondary-heading: var(--color-gold); /* About section subheadings */
+    --button-bg: var(--color-gold);
+    --button-text: var(--color-black);
+    --button-hover-bg: var(--color-red);
+    --button-hover-text: var(--color-white);
+    --footer-bg: var(--color-black);
+    --footer-text: var(--color-white);
+    --link-color: var(--color-black); /* For back-link */
+    --link-hover-color: var(--color-gold); /* For back-link */
+    --service-page-bg: var(--color-light-grey); /* Specific for service pages background */
+    --service-content-bg: var(--color-white);
+    --service-content-text: var(--color-black);
+    --service-content-heading: var(--color-red); /* Main service title */
+    --service-content-secondary-heading: var(--color-gold); /* Service detail subheadings */
+    --carousel-text-bg: rgba(0, 0, 0, 0.5); /* Semi-transparent background for hero text */
+    --carousel-dots-bg: rgba(255, 255, 255, 0.5); /* Carousel dot background */
+    --carousel-dots-active: var(--color-gold); /* Active carousel dot */
+
+    /* Dark Mode Overrides */
+    --dm-bg-color: var(--color-dark-grey);
+    --dm-text-color: var(--color-white);
+    --dm-heading-color: var(--color-gold);
+    --dm-secondary-heading-color: var(--color-red);
+    --dm-header-bg: var(--color-dark-grey); /* Slightly lighter dark for header */
+    --dm-header-text: var(--color-gold);
+    --dm-header-link: var(--color-white);
+    --dm-header-link-hover: var(--color-gold);
+    --dm-service-item-bg: var(--color-dark-grey);
+    --dm-service-item-text: var(--color-white);
+    --dm-service-item-heading: var(--color-gold);
+    --dm-section-bg: var(--color-dark-grey);
+    --dm-dark-section-bg: var(--color-black); /* Keep some contrast for dark section */
+    --dm-dark-section-text: var(--color-white);
+    --dm-dark-section-heading: var(--color-red);
+    --dm-dark-section-secondary-heading: var(--color-red);
+    --dm-button-bg: var(--color-red);
+    --dm-button-text: var(--color-white);
+    --dm-button-hover-bg: var(--color-gold);
+    --dm-button-hover-text: var(--color-black);
+    --dm-footer-bg: var(--color-black);
+    --dm-footer-text: var(--color-gold);
+    --dm-link-color: var(--color-gold);
+    --dm-link-hover-color: var(--color-red);
+    --dm-service-page-bg: var(--color-dark-grey);
+    --dm-service-content-bg: var(--color-black);
+    --dm-service-content-text: var(--color-white);
+    --dm-service-content-heading: var(--color-gold);
+    --dm-service-content-secondary-heading: var(--color-red);
+    --dm-carousel-text-bg: rgba(26, 26, 26, 0.7); /* Slightly darker semi-transparent */
+    --dm-carousel-dots-bg: rgba(51, 51, 51, 0.5);
+    --dm-carousel-dots-active: var(--color-red);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for body theme */
+}
+
+body.dark-mode {
+    --bg-color: var(--dm-bg-color);
+    --text-color: var(--dm-text-color);
+    --heading-color: var(--dm-heading-color);
+    --secondary-heading-color: var(--dm-secondary-heading-color);
+    --header-bg: var(--dm-header-bg);
+    --header-text: var(--dm-header-text);
+    --header-link: var(--dm-header-link);
+    --header-link-hover: var(--dm-header-link-hover);
+    --service-item-bg: var(--dm-service-item-bg);
+    --service-item-text: var(--dm-service-item-text);
+    --service-item-heading: var(--dm-service-item-heading);
+    --section-bg: var(--dm-section-bg);
+    --dark-section-bg: var(--dm-dark-section-bg);
+    --dark-section-text: var(--dm-dark-section-text);
+    --dark-section-heading: var(--dm-dark-section-heading);
+    --dark-section-secondary-heading: var(--dm-dark-section-secondary-heading);
+    --button-bg: var(--dm-button-bg);
+    --button-text: var(--dm-button-text);
+    --button-hover-bg: var(--dm-button-hover-bg);
+    --button-hover-text: var(--dm-button-hover-text);
+    --footer-bg: var(--dm-footer-bg);
+    --footer-text: var(--dm-footer-text);
+    --link-color: var(--dm-link-color);
+    --link-hover-color: var(--dm-link-hover-color);
+    --service-page-bg: var(--dm-service-page-bg);
+    --service-content-bg: var(--dm-service-content-bg);
+    --service-content-text: var(--dm-service-content-text);
+    --service-content-heading: var(--dm-service-content-heading);
+    --service-content-secondary-heading: var(--dm-service-content-secondary-heading);
+    --carousel-text-bg: var(--dm-carousel-text-bg);
+    --carousel-dots-bg: var(--dm-carousel-dots-bg);
+    --carousel-dots-active: var(--dm-carousel-dots-active);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease; /* Smooth transition for heading color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for header theme */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-gold); /* Logo remains gold */
+}
+
+nav {
+    display: flex; /* Ensure theme toggle button is in the flex flow */
+    align-items: center;
+    gap: 1rem; /* Space between theme toggle, hamburger, and links */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--header-link);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--header-link-hover);
+}
+
+.theme-toggle-button {
+    background: none;
+    border: none;
+    color: var(--header-text); /* Inherit color from header */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    line-height: 1; /* Ensure vertical alignment */
+}
+
+.theme-toggle-button:hover {
+    color: var(--header-link-hover);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-gold);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem; /* Add padding */
+    line-height: 1; /* Ensure vertical alignment */
+}
+
+/* Hero Section (Carousel) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    margin-top: 68px; /* Offset for fixed header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 300%; /* 3 images */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: calc(100% / 3); /* Each image takes 1/3 of the container width */
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-prev {
+    left: 1rem;
+}
+
+.carousel-next {
+    right: 1rem;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--carousel-dots-bg);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--carousel-dots-active);
+    transform: scale(1.2);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    background-color: var(--carousel-text-bg); /* Semi-transparent background */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    color: var(--color-gold); /* Título principal en dorado */
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-text);
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--section-bg);
+}
+
+.dark-section {
+    background-color: var(--dark-section-bg);
+    color: var(--dark-section-text);
+}
+
+.dark-section h2,
+.dark-section h3 {
+     color: var(--dark-section-heading); /* Títulos en dorado en secciones oscuras */
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Style the anchor tag wrapper for service items */
+.services-grid a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.service-item {
+    background-color: var(--service-item-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    color: var(--service-item-text); /* Asegura texto negro en fondo blanco */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.dark-section .service-item {
+     background-color: var(--color-light-grey); /* Servicios en gris claro en sección oscura */
+     color: var(--color-black);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+     color: var(--service-item-heading); /* Títulos de servicio en rojo */
+    margin-bottom: 0.5rem;
+}
+
+/* About Section (Vision/Mission) */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.vision-mission, .our-story {
+    flex: 1;
+    min-width: 300px;
+}
+
+.vision, .mission {
+    margin-bottom: 1.5rem;
+}
+
+.vision h3, .mission h3, .our-story h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-section-secondary-heading); /* Títulos internos en dorado */
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Fixed height for gallery images */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-info {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #000; /* fondo negro */
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+.whatsapp-button img {
+  width: 30px;
+  height: 30px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+        background-color: var(--color-black); 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        padding: 1rem 0;
+    }
+
+     nav ul.active {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 0.5rem 1rem;
+        text-align: center;
+    }
+
+    nav ul li a {
+         display: block; 
+         padding: 0.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+     .carousel-prev, .carousel-next {
+         padding: 0.5rem;
+         font-size: 1rem;
+     }
+
+     .whatsapp-button {
+        width: 60px; 
+        height: 60px; 
+        bottom: 1.5rem;
+        right: 1.5rem;
+     }
+     .whatsapp-button img {
+         width: 65%; 
+         height: 65%; 
+     }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-button {
+        width: 55px; 
+        height: 55px; 
+        bottom: 1rem;
+        right: 1rem;
+    }
+     .whatsapp-button img {
+        width: 65%; 
+        height: 65%; 
+    }
+}
+
+/* General Service Page Styling */
+.service-page {
+    padding-top: 68px; 
+    min-height: calc(100vh - 110px); 
+    background-color: var(--service-page-bg);
+    color: var(--service-content-text);
+}
+
+.service-page .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-content {
+    background-color: var(--service-content-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+}
+
+.service-content h2 {
+    text-align: center;
+    color: var(--service-content-heading);
+    margin-bottom: 1.5rem;
+}
+
+.service-content img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.service-details h3 {
+     color: var(--service-content-secondary-heading);
+     margin-bottom: 0.5rem;
+}
+
+.service-details p {
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--service-content-text);
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--link-hover-color);
+}
+
+/* Ensure footer is styled correctly on service pages */
+.service-page + footer {
+     margin-top: 0; 
+}

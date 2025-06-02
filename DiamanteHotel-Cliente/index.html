@@ -1,0 +1,163 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Diamante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logoHotelDiamante.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Hotel Diamante</div>
+            <nav>
+                <button id="theme-toggle" aria-label="Toggle light/dark theme" class="theme-toggle-button">
+                    🌙 
+                </button>
+                <button class="hamburger" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="hotel-exterior.png" alt="Hotel Exterior">
+                <img src="hotel-room.png" alt="Habitación de Lujo">
+                <img src="hotel-pool.png" alt="Piscina del Hotel">
+            </div>
+            <button class="carousel-prev">&#10094;</button>
+            <button class="carousel-next">&#10095;</button>
+            <div class="carousel-dots"></div>
+        </div>
+        <div class="hero-text">
+            <h1 id="carousel-title"></h1>
+            <p id="carousel-subtitle"></p>
+            <a href="#servicios" class="btn">Descubre Nuestros Servicios</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <a href="servicio-habitaciones.html">
+                    <div class="service-item">
+                        <img src="room-service-icon.png" alt="Servicio de Habitaciones">
+                        <h3>Servicio de Habitaciones 24/7</h3>
+                        <p>Atención personalizada en cualquier momento del día.</p>
+                    </div>
+                </a>
+                <a href="restaurante.html">
+                    <div class="service-item">
+                        <img src="restaurant-icon.png" alt="Restaurante">
+                        <h3>Restaurante Gourmet</h3>
+                        <p>Disfruta de una experiencia culinaria excepcional.</p>
+                    </div>
+                </a>
+                <a href="wifi.html">
+                    <div class="service-item">
+                        <img src="wifi-icon.png" alt="WiFi Premium">
+                        <h3>WiFi Premiun</h3>
+                        <p>Mantente conectado con nuestro internet de alta velocidad.</p>
+                    </div>
+                </a>
+                <a href="spa.html">
+                    <div class="service-item">
+                        <img src="spa-icon.png" alt="Spa">
+                        <h3>Spa y Bienestar</h3>
+                        <p>Relájate y rejuvenece en nuestras instalaciones de spa.</p>
+                    </div>
+                </a>
+                <a href="piscina.html">
+                    <div class="service-item">
+                        <img src="hotel-pool.png" alt="Piscina">
+                        <h3>Piscina Panorámica</h3>
+                        <p>Disfruta de vistas increíbles mientras te refrescas.</p>
+                    </div>
+                </a>
+                <a href="parking.html">
+                    <div class="service-item">
+                        <img src="parking-icon.png" alt="Parking">
+                        <h3>Parking Privado</h3>
+                        <p>Tu vehículo seguro durante tu estancia.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="section dark-section">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="vision-mission">
+                    <div class="vision">
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser el hotel líder de lujo, reconocido por nuestra excelencia en el servicio y la creación de experiencias memorables para nuestros huéspedes.</p>
+                    </div>
+                    <div class="mission">
+                        <h3>Nuestra Misión</h3>
+                        <p>Ofrecer un servicio impecable y personalizado, proporcionando un ambiente de confort, elegancia y seguridad, superando siempre las expectativas de quienes nos visitan.</p>
+                    </div>
+                </div>
+                <div class="our-story">
+                    <h3>Nuestra Historia</h3>
+                    <p>Desde 2006, Hotel Diamante ha sido sinónimo de hospitalidad de primer nivel. Nuestra dedicación a los detalles y nuestro personal altamente capacitado garantizan una estancia inigualable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2>Galería</h2>
+            <p>Descubre nuestras instalaciones a través de imágenes.</p>
+            <div class="gallery-grid">
+                <img src="hotel-exterior.png" alt="Hotel Exterior">
+                <img src="hotel-room.png" alt="Habitación de Lujo">
+                <img src="hotel-pool.png" alt="Piscina del Hotel">
+                <img src="hotel-restaurant.png" alt="Restaurante del Hotel">
+                <img src="hotel-lobby.png" alt="Lobby del Hotel">
+                <img src="hotel-spa.png" alt="Spa del Hotel">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section dark-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Listo para reservar o tienes alguna pregunta? Contáctanos.</p>
+            <div class="contact-info">
+                <p>Teléfono: +503 7531-9174</p>
+                <p>Email: hoteldiamante@gmail.com</p>
+                <p>Dirección: Sonzacate, Sonsonate, El Salvador</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hotel Diamante. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+	<a href="https://wa.me/75319174?text=Hola%2C%20me%20gustaría%20más%20información%20sobre%20el%20hotel"
+          class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+          <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+       </a>	
+    
+    <script src="script.js"></script>
+</body>
+</html>
